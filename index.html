@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -7,8 +7,72 @@
   <title>Form Submit | @Kervines</title>
 </head>
 
-<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+  * {
+    margin: 0;
+    padding: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    background-color: #fafafa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .container-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-form input,
+  .container-form textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  button[type='submit'] {
+    font-size: 1rem;
+    padding: .3rem .5rem;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+</style>
+
+<body>
+  <h1>Form Submit</h1>
+  <form action="https://formsubmit.co/dev.kervin@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+    <div class="container-form">
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name" placeholder="">
+    </div>
+    <div class="container-form">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="">
+    </div>
+    <div class="container-form">
+      <label for="msg">Message</label>
+      <textarea name="msg" id="msg" rows="5" cols="20" placeholder=""></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
 </body>
 
 </html>
