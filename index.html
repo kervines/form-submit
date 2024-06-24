@@ -36,44 +36,48 @@
     flex-direction: column;
     padding: 1rem;
   }
-
-  .container-form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .container-form input,
-  .container-form textarea {
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-
-  button[type='submit'] {
-    font-size: 1rem;
-    padding: .3rem .5rem;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
 </style>
 
 <body>
-  <h1>Inscrição para desconto</h1>
+  <h1>Cadastro de Aluno</h1>
   <form action="https://formsubmit.co/dev.kervin@gmail.com" method="POST">
     <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
-    <div class="container-form">
-      <label for="name">Nome</label>
-      <input type="text" name="name" id="name" placeholder="">
+    <div class="row">
+      <div class="col-md mb-3">
+        <label for="inputName" class="form-label">Nome</label>
+        <input name="nome" type="text" class="form-control" id="inputName" aria-describedby="Name">
+      </div>
+      <div class="col-md mb-3">
+        <label for="inputLastName" class="form-label">Sobrenome</label>
+        <input name="sobrenome" type="text" class="form-control" id="inputLastName" aria-describedby="LastName">
+      </div>
     </div>
-    <div class="container-form">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="">
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input name="email" type="email" class="form-control" id="inputEmail">
     </div>
-    <div class="container-form">
-      <label for="msg">Message</label>
-      <textarea name="msg" id="msg" rows="5" cols="20" placeholder=""></textarea>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="inputAddress" class="form-label">Endereço</label>
+        <input name="endereco" type="text" class="form-control" id="inputAddress">
+      </div>
+      <div class="col-4 mb-3">
+        <label for="inputAddress_number" class="form-label">Número</label>
+        <input name="numero" type="number" class="form-control" id="inputAddress_number">
+      </div>
     </div>
-    <button type="submit">Send</button>
+    <select name="curso" class="mt-2 form-select" aria-label="Default select example">
+      <option selected>Selecione seu curso</option>
+      <option value="ciencia_da_computacao">Ciência da Computação</option>
+      <option value="engenharia">Engenharia</option>
+      <option value="medicina">Medicina</option>
+      <option value="direito">Direito</option>
+    </select>
+    <div class="my-3 form-check">
+      <input required type="checkbox" class="form-check-input" id="inputCheck">
+      <label class="form-check-label" for="inputCheck">Concordo com os termos e condições</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
 </body>
 
