@@ -14,7 +14,6 @@ const validated = () => {
         } else {
           email.classList.remove('is-invalid');
         }
-
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
